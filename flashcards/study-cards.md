@@ -46,12 +46,11 @@
 - A: Disjoint convex sets A and B do not overlap along axis a.
 
 ## Q: AABB collision condition?
-- A: $\text{min}_{1_x} \leq \text{max}_{2_x} \land \text{min}_{2_x} \leq \text{max}_{1_x} \land \text{min}_{1_y} \leq \text{max}_{2_y} \land \text{min}_{2_y} \leq \text{max}_{1_y} \land \text{min}_{1_z} \leq \text{max}_{2_z} \land \text{min}_{2_z} \leq \text{max}_{1_z}$
+- A: $\text{min}\_{1_x} \leq \text{max}\_{2_x} \land \text{min}\_{2_x} \leq \text{max}\_{1_x} \land \text{min}\_{1_y} \leq \text{max}\_{2_y} \land \text{min}\_{2_y} \leq \text{max}\_{1_y} \land \text{min}\_{1_z} \leq \text{max}\_{2_z} \land \text{min}\_{2_z} \leq \text{max}\_{1_z}$
 
 ## Q: AABB collision check code?
 - A: 
-```
-cpp
+```cpp
 bool intersects = b1.min.x < b2.max.x && b2.min.x < b1.max.x &&
                   b1.min.y < b2.max.y && b2.min.y < b1.max.y &&
                   b1.min.z < b2.max.z && b2.min.z < b1.max.z;
@@ -62,9 +61,6 @@ bool intersects = b1.min.x < b2.max.x && b2.min.x < b1.max.x &&
 
 ## Q: Contact point calculation for line and sphere?
 - A: Solve $\|M + p \mu - O\| = r$ for $\mu$.
-
-## Q: Solving contact for plane and line segment?
-- A: Out of scope; see Gilbert–Johnson–Keerthi algorithm.
 
 ## Q: Collision queries types?
 - A: Ray casting, shape casting, phantoms, closest-point.
